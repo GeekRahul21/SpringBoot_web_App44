@@ -50,8 +50,6 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
 
-**Do not upload your real database password to GitHub.**
-
 ## How to Run
 
 1. Clone the repository.
