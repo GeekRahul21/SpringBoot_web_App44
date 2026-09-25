@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <!-- Top Bar -->
+
+        <div class="topbar">
+
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Welcome, Admin</p>
+            </div>
+
+            <div>
+
+                <a class="edit-btn"
+                   th:href="@{/admin/addUser}">
+                    Add User
+                </a>
+
+                <a class="delete-btn"
+                   th:href="@{/admin/Logout}">
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Dashboard Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Total Users</h3>
+
+                <h2 th:text="${totalUsers}"></h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Total Admins</h3>
+
+                <h2 th:text="${totalAdmins}"></h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- Users Table -->
+
+        <div class="users-section">
+
+            <h2>All Registered Users</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Password</th>
+
+                        <th>Role</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr th:each="user : ${users}">
+
+                        <td th:text="${user.id}"></td>
+
+                        <td th:text="${user.name}"></td>
+
+                        <td th:text="${user.email}"></td>
+
+                        <td th:text="${user.phoneno}"></td>
+
+                        <td th:text="${user.password}"></td>
+
+                        <td th:text="${user.role}"></td>
+
+                        <td>
+
+                            <a class="edit-btn"
+                               th:href="@{/admin/editProfile(id=${user.id})}">
+                                Edit
+                            </a>
+
+                            <a class="delete-btn"
+                               th:href="@{/admin/deleteUser(id=${user.id})}"
+                               onclick="return confirm('Are you sure you want to delete this user?')">
+                                Delete
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

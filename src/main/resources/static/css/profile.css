@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Card */
+
+body > * {
+    /* prevents individual elements from looking scattered */
+}
+
+h1 {
+    position: absolute;
+    top: 60px;
+
+    color: #222;
+    font-size: 32px;
+}
+
+/* Profile Information */
+
+p {
+    background-color: white;
+
+    width: 450px;
+    padding: 15px 20px;
+
+    margin-bottom: 10px;
+
+    border-radius: 6px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    color: #555;
+}
+
+p span {
+    color: #222;
+    font-weight: bold;
+}
+
+/* Buttons */
+
+button {
+    border: none;
+    padding: 11px 18px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    color: white;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+}
+
+/* Edit Button */
+
+a:first-of-type button {
+    background-color: #007bff;
+}
+
+a:first-of-type button:hover {
+    background-color: #0056b3;
+}
+
+/* Delete Button */
+
+a:nth-of-type(2) button {
+    background-color: #dc3545;
+}
+
+a:nth-of-type(2) button:hover {
+    background-color: #b02a37;
+}
+
+/* Logout */
+
+a:last-of-type {
+    display: inline-block;
+
+    margin-left: 10px;
+    margin-top: 15px;
+
+    padding: 11px 18px;
+
+    border-radius: 6px;
+
+    background-color: #6c757d;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a:last-of-type:hover {
+    background-color: #545b62;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    h1 {
+        top: 30px;
+        font-size: 26px;
+    }
+
+    p {
+        width: 90%;
+    }
+
+    button,
+    a:last-of-type {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+}

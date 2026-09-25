@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    
+    background-image: url("../images/IMG_20230502_181904.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    
+}
+
+/* Navigation */
+
+nav {
+    height: 70px;
+    background-color: #222;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.nav-links a:hover {
+    color: #00bfff;
+}
+
+/* Main Content */
+
+.container {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.container h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+
+.buttons a {
+    display: inline-block;
+
+    padding: 14px 30px;
+    margin: 10px;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-size: 17px;
+}
+
+
+
+.login {
+    background-color: #007bff;
+    color: white;
+}
+
+.register {
+    background-color: #28a745;
+    color: white;
+}
+
+.buttons a:hover {
+    opacity: 0.85;
+}

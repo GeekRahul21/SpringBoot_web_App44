@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" th:href="@{/css/profile.css}">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>My Profile</h1>
+
+<p>Name: <span th:text="${user.name}"></span></p>
+
+<p>Email: <span th:text="${user.email}"></span></p>
+
+<p>Password: <span th:text="${user.password}"></span></p>
+
+<p>Phoneno : <span th:text="${user.phoneno}"></span></p>
+
+<a th:href="@{/editProfile(id=${user.id})}">
+    <button type="button">Edit Profile</button>
+</a>
+
+
+
+<a th:href="@{/deleteProfile(id=${user.id})}"
+   onclick="return confirm('Are you sure you want to delete your profile?')">
+
+    <button type="button">Delete Profile</button>
+      
+
+</a>
+
+<a th:href="@{/Logout}">Logout</a>
+
+</body>
+</html>
